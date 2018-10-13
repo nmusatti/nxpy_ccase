@@ -1,4 +1,4 @@
-# nxpy -----------------------------------------------------------------------
+# nxpy_ccase -----------------------------------------------------------------
 
 # Copyright Nicola Musatti 2018
 # Use, modification, and distribution are subject to the Boost Software
@@ -19,11 +19,11 @@ import os.path
 
 from setuptools import setup
 
-PACKAGE_NAME = 'Nxpy.Ccase'
+PACKAGE_NAME = 'nxpy_ccase'
 
 here = os.path.abspath(os.path.dirname(__file__))
 
-with codecs.open(os.path.join(here,'DESCRIPTION.rst'), encoding='utf-8') as f:
+with codecs.open(os.path.join(here,'README.rst'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
@@ -49,7 +49,8 @@ setup(
     ],
     install_requires=[
         'six',
-        'nxpy.command',
-        'nxpy.test',
+        'nxpy_command',
+        'nxpy_path',
+        'nxpy_test',
     ],
 )
