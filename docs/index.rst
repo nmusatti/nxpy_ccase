@@ -16,9 +16,7 @@
 Nxpy Ccase
 ==========
 
-Nxpy is an etherogeneous collection of libraries, dealing with diverse topics such as wrapping
-complex commands with API's, automation of backup files, support for writing your own file-like
-objects and many other things.
+Nxpy Ccase provides a Python wrapper for ``cleartool``, the ClearCase command line utility.
 
 
 .. toctree::
@@ -26,13 +24,12 @@ objects and many other things.
 
    ccase.rst
 
-The libraries are being developed with Python 3.7 so as to be compatible with Python 2.7. Tests are
-run and most modules work also with 3.4, 3.5 and 3.6. Some should still work with versions as early
-as 3.2 and 2.5.
+It is being developed with Python 3.7 so as to be compatible with Python 2.7. Tests are
+run also with 3.4, 3.5 and 3.6. It may still work with versions as early as 3.2 and 2.5, but they
+are not tested.
 
-Originally the libraries resided on `SourceForge`_ and were distributed as a single package.
-Starting from release 1.0.0 each library is being packaged separately even though they are all
-hosted within the same project on `GitHub`_.
+Originally the library was part of the Nxpy project and resided on `SourceForge`_.
+Starting from release 1.0.0 it is being packaged separately and it is hosted on `GitHub`_.
 
 The Nxpy logo was drawn by Claudia Romano.
 
@@ -46,4 +43,4 @@ Indices and tables
 
 
 .. _SourceForge: http://nxpy.sourceforge.net/
-.. _GitHub: https://github.com/nmusatti/nxpy
+.. _GitHub: https://github.com/nmusatti/nxpy_ccase

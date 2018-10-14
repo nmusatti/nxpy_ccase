@@ -1,9 +1,8 @@
 Nxpy Ccase - WORK IN PROGRESS
 =============================
 
-.. note:: This project needs a new maintainer. I only ever managed to test it against a now
-          ancient ClearCase 7.1 LT installation, to which I'm likely to lose access in a not too
-          distant future.
+  *This project needs a new maintainer. I only ever managed to test it against a now ancient
+  ClearCase 7.1 LT installation, to which I'm likely to lose access in a not too distant future.*
 
 *Nxpy Ccase* is a wrapper for the Clear Case ``cleartool`` command line utility that allows the
 invocation of Clear Case UCM commands as Python methods.
