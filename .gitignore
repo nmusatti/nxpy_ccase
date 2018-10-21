@@ -1,8 +1,12 @@
 /.??*
 /.??*/
 /tmp/
-__pycache__/
 _build/
+build/
+corelib/
+dist/
+lib/
+__pycache__/
 *.egg-info/
 *.pyc
 .*.un~
