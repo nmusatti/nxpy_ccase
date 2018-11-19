@@ -1,5 +1,5 @@
-Nxpy Ccase - WORK IN PROGRESS
-=============================
+Nxpy Ccase
+==========
 
   *This project needs a new maintainer. I only ever managed to test it against a now ancient
   ClearCase 7.1 LT installation, to which I'm likely to lose access in a not too distant future.*
