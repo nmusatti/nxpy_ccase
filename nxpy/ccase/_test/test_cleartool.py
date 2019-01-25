@@ -20,6 +20,8 @@ import nxpy.ccase.cleartool
 import nxpy.ccase.test.env
 import nxpy.command.interpreter
 import nxpy.command.option
+import nxpy.core.file
+import nxpy.core.temp_file
 import nxpy.test.log
 import nxpy.test.test
 
@@ -217,6 +219,16 @@ class ClearToolTest(ClearToolTestBase):
             self.assertTrue(self.tool.describe(self.tool.lsactivity(me=True, 
                     fmt=r"%Xn\n").splitlines()[0]))
 
+# get
+
+    def test_get_pass(self):
+        v = self.tool.ls(self.env.src_file_path, nxn=False)
+        v = v.strip()
+        with nxpy.core.temp_file.TempDir() as d:
+            dest_file = os.path.join(d.name, self.env.src_file_name)
+            self.tool.get(dest_file, v)
+            self.assertTrue(nxpy.core.file.compare(dest_file, self.env.src_file_path))
+
 # ln - performed only in a testing environment
 
     def test_ln_pass(self):
@@ -259,7 +271,7 @@ class ClearToolTest(ClearToolTestBase):
 # lshistory
 
     def test_lshistory_pass(self):
-        self.assertTrue(self.tool.lshistory(self.env.src_file_path))
+        self.assertTrue(self.tool.lshistory(self.env.src_file_path, all=True))
     
     def test_lshistory_fail(self):
         self.assertRaises(nxpy.ccase.cleartool.FailedCommand, self.tool.lshistory,

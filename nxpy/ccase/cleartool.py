@@ -156,6 +156,10 @@ class ClearTool(object):
         op.checkExclusiveOptions("fmt", "short")
         return self._run(op)[0]
 
+    def get(self, dest, src):
+        op = nxpy.command.option.Parser(_config, "get -to", ( dest, src ), {})
+        return self._run(op)[0]
+
     def ln(self, dest, *src, **options):
         r"""Note: Arguments are inverted with respect to the original command, beware!"""
         args = src + (dest, )
@@ -182,7 +186,7 @@ class ClearTool(object):
         return self._run(op, interval=0.1)[0]
     
     def lshistory(self, obj, **options):
-        op = nxpy.command.option.Parser(_config, "lshistory", ( obj, ), options, fmt="")
+        op = nxpy.command.option.Parser(_config, "lshistory", ( obj, ), options, all=False, fmt="")
         return self._run(op)[0]
 
     def lsproject(self, **options):

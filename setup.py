@@ -56,6 +56,8 @@ setup(
         'six',
         'nxpy_command',
         'nxpy_path',
+        'nxpy_file',
+        'nxpy_temp_file',
         'nxpy_test',
     ],
 )
