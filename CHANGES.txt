@@ -1,2 +1,6 @@
-v1,0,0, XX/XX/XXXX - 
-    First release as a separate library.
+v1.0.1, 12/3/2019 - Small changes
+    Implemented the 'get' command and added support for additional options to the 'lshistory'
+    command
+
+v1.0.0, 21/10/2018 - First separate release
+    The library has been split from the nxpy project and ported to GitHub as a separate project.
