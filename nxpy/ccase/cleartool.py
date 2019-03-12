@@ -47,8 +47,8 @@ _config = nxpy.command.option.Config(
     prefix="-",
 
     # boolean options, which appear on the command line without arguments.
-    bool_opts=("cact", "cview", "force", "identical", "keep", "long", "me",
-            "none", "nxn", "preview", "print_report", "short", "slink",
+    bool_opts=("cact", "cview", "eventid", "force", "identical", "keep", "long", "me", "nco",
+            "none", "nxn", "preview", "print_report", "recurse", "short", "slink",
             "visible", "vob_only"),
 
     # Options with an associated value
@@ -186,7 +186,10 @@ class ClearTool(object):
         return self._run(op, interval=0.1)[0]
     
     def lshistory(self, obj, **options):
-        op = nxpy.command.option.Parser(_config, "lshistory", ( obj, ), options, all=False, fmt="")
+        op = nxpy.command.option.Parser(_config, "lshistory", ( obj, ), options, all=False, 
+                eventid=False, fmt="", long=False, nco=False, recurse=False)
+        op.checkExclusiveOptions("fmt", "long")
+        op.checkExclusiveOptions("all", "nco")
         return self._run(op)[0]
 
     def lsproject(self, **options):
